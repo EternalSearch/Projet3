@@ -37,7 +37,9 @@ main {
     flex-direction: column;
     gap: 35px;
 }
-
+h3{
+    margin: 0;
+}
 .logo_reservia {
     padding: 30px 50px 30px 50px;
 }
@@ -135,14 +137,14 @@ h1 {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    flex-shrink: 0;
+    flex-shrink: 1;
 }
 
 .black_icone {
     color: black;
 }
 
-.search_input {
+.search_input {   
     border: 1px solid var(--main-bg-color);
     border-left: 0px;
     border-right: 0px;
@@ -150,7 +152,7 @@ h1 {
     font-size: 18px;
     font-weight: 700;
     box-sizing: border-box;
-    padding: 14px 24px
+    padding: 14px 24px    
 }
 
 .search_button {
@@ -220,13 +222,13 @@ h1 {
 .section-title {
     margin: 0;
     font-size: 22px;
+   
 }
 
 .card {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-
 }
 
 .card img {
@@ -273,17 +275,11 @@ h1 {
     gap: 30px;
 }
 
-.hebergements h2
-h3 {
-    margin: 0;
-}
-
 .hebergements p {
     font-size: 22px;
     font-weight: 700;
     margin: 0;
 }
-
 .hebergements .card-content {
     padding: 0px 15px 0px 15px;
     gap: 8px;
@@ -296,16 +292,18 @@ h3 {
     font-weight: 400;
 }
 
-.hebergements .card-content h3 {
-    margin: 0;
-}
+.size .card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
 
+}
 .hebergements .card-txt {
     display: flex;
     flex-direction: column;
     gap: 8px;
-
 }
+
 
 .hebergements .card {
     padding: 0px 0px 15px 0px;
@@ -318,18 +316,23 @@ h3 {
     border-right: 5px solid white;
     width: 100%;
     box-sizing: border-box;
+    
 }
 
 .three-hebergements {
     display: flex;
-    flex-direction: row;
+  flex-wrap: wrap;
     gap: 30px;
+
 }
 
 .three-hebergements a {
-    flex: 1;
+   flex: 1;
 }
 
+.size {
+    min-width:30%;
+}
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -399,12 +402,6 @@ h3 {
     flex: 1;
 }
 
-.card_content2 .card {
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
-}
-
 .card_content2 {
     display: flex;
     gap: 30px;
@@ -412,7 +409,10 @@ h3 {
 
 .activities_marseille .card {
     border-radius: 20px;
-    padding: 0;
+    padding: 0; 
+    flex-direction: column;
+    display: flex; 
+    height: 100%;
 }
 
 
@@ -436,6 +436,8 @@ h3 {
 
 .subtitle_activities h3 {
     font-size: 16px;
+   
+
 }
 
 footer {
@@ -534,7 +536,8 @@ footer {
         box-sizing: border-box;
         align-items: center;
     }
-}
+ }
+
 
 
 /* Small devices (phones, less than 768px) */
@@ -596,6 +599,7 @@ footer {
         border-radius: 15px;
         box-sizing: border-box;
         flex: 1;
+        
     }
 
     .search-bar form {
@@ -607,7 +611,9 @@ footer {
         border: unset;
         box-sizing: border-box;
         display: flex;
-    }
+        width:100%;
+        text-overflow: ellipsis;
+    } 
 
     .search_icone {
         box-sizing: border-box;
@@ -635,6 +641,7 @@ footer {
 
     .search_filter {
         flex: 1 0 40%;
+        min-width: 160px;
     }
 
     .categories_filter .search_filter p {
@@ -692,5 +699,4 @@ footer {
     footer {
         flex-direction: column;
     }
-
 }
